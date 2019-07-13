@@ -5,8 +5,7 @@ class Student
   # Remember, you can access your database connection anywhere in this class
   #  with DB[:conn]
   
-attr_accessor :name, :grade
-attr_reader :id 
+attr_accessor :name, :grade, :id 
   
   def initialize ( id=nil, name, grade)
     @id = id 
@@ -76,5 +75,4 @@ attr_reader :id
     sql = "UPDATE students SET name = ?, grade = ? WHERE id = ?"
     DB[:conn].execute(sql, self.name, self.grade, self.id)
   end
-end
 end
