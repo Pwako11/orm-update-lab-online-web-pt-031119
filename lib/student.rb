@@ -48,7 +48,6 @@ attr_accessor :name, :grade, :id
   def self.create (name:, grade:)
     student = Student.new(name, grade)
     student.save
-    student
   end 
   
   def self.new_from_db(row)
